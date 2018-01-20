@@ -1,0 +1,3 @@
+name: Anav Gupta
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
