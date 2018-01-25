@@ -3,25 +3,25 @@ layout: feed
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Anav Gupta's Blog</title>
- <link href="https://anavgupta.github.io/blog/atom.xml" rel="self"/>
- <link href="https://anagupta.github.io/blog"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>https://anavgupta.github.io/blog</id>
- <author>
-   <name>Anav Gupta</name>
-   <email>anavgupta13@gmail.com</email>
- </author>
 
- {% for post in site.posts %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="http://anavgupta.github.io{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://anavgupta.github.io/{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
- 
+        <title>Hank Quinlan's Blog</title>
+        <link href="https://anavgupta.github.io/blog/atom.xml" rel="self"/>
+        <link href="https://anagupta.github.io/blog"/>
+        <updated>&lbrace;&lbrace; site.time | date_to_xmlschema &rbrace;&rbrace;</updated>
+        <id>https://anavgupta.github.io/blog</id>
+        <author>
+                <name>Anav Gupta</name>
+                <email>anavgupta13@gmail.com</email>
+        </author>
+
+        &lbrace;&percnt; for post in site.posts &percnt;&rbrace;
+                <entry>
+                        <title>&lbrace;&lbrace; post.title &rbrace;&rbrace;</title>
+                        <link href="https://anavgupta.github.io&lbrace;&lbrace; post.url &rbrace;&rbrace;"/>
+                        <updated>&lbrace;&lbrace; post.date | date_to_xmlschema &rbrace;&rbrace;</updated>
+                        <id>https://anavgupta.github.io&lbrace;&lbrace; post.id &rbrace;&rbrace;</id>
+                        <content type="html">&lbrace;&lbrace; post.content | xml_escape &rbrace;&rbrace;</content>
+                </entry>
+        &lbrace;&percnt; endfor &percnt;&rbrace;
+
 </feed>
